@@ -18,9 +18,9 @@ object BuildSettings {
     publishTo := {
       val nexus = "https://nexus.shopback-data.com/"
       if (isSnapshot.value)
-        Some("snapshots" at nexus + "repository/maven-snapshots/")
+        Some("snapshots" at nexus + "repository/maven-internal-snapshots/")
       else
-        Some("releases"  at nexus + "repository/maven-releases/")
+        Some("releases"  at nexus + "repository/maven-internal-releases/")
     },
     credentials += Credentials(Path.userHome / ".sbt" / ".credentials")
   )
